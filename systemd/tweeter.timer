@@ -1,0 +1,12 @@
+
+[Unit]
+Description=Tweeter timer
+
+[Timer]
+OnCalendar=00,08,16:00
+RandomizedDelaySec=25200
+Persistent=True
+
+[Install]
+WantedBy=timers.target
+

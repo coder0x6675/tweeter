@@ -1,0 +1,13 @@
+
+[Unit]
+Description=Tweeter
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/srv/tweeter
+ExecStart=/bin/sh -c 'venv/bin/python -u tweeter.py'
+
+[Install]
+WantedBy=multi-user.target
